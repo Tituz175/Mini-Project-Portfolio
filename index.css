@@ -10,3 +10,46 @@ body{
     font-weight: 300;
     letter-spacing: 1.5rem;
 }
+#titles{
+    width: 100%;
+    height: auto;
+    background-color: bisque;
+    padding: 3% 2%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-left: 20px;
+    transition: padding-left 5s ease-in;
+}
+#bio{
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2.5rem;
+}
+#challenges{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+}
+#challenges  div{
+    width: 20%;
+    border: 1px solid #d6cecede;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 5rem 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#teach{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+#teach span{
+    font-size: 3rem;
+    font-weight: 600;
+    color: aqua;
+}

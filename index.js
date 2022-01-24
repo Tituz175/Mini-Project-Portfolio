@@ -29,5 +29,30 @@ const info = {
   bio: `I am Asabeneh Yetayeh educator, developer, motivator and content creator.`,
 };
 
-const authorName = document.getElementById("author-name")
-authorName.textContent = `${info.author.firstName} ${info.author.lastName}`
+const authorName = document.getElementById("author-name");
+authorName.textContent = `${info.author.firstName} ${info.author.lastName}`;
+
+const challenges = document.querySelectorAll("#challenges div");
+challenges.forEach((element, i) => {
+  element.textContent = info.challenges[i].toUpperCase();
+});
+
+const techContainer = document.querySelector("#teach")
+const tech = document.createElement("span")
+
+
+let count = 0;
+
+setInterval(() => {
+  info.technologies.forEach((element, i) => {
+    if (count == i) {
+      tech.textContent = element
+      if (count == info.technologies.length - 1) {
+        count = -1;
+      }
+    }
+  });
+  count++;
+}, 3000);
+
+techContainer.appendChild(tech)
