@@ -8,7 +8,7 @@ const info = {
       ["🌐", "Developer"],
       ["🔥", "Motivator"],
       ["📔", "Content Creator"],
-      ["👨‍🏫", "Instructor"]
+      ["👨‍🏫", "Instructor"],
     ],
   },
   technologies: [
@@ -41,19 +41,42 @@ challenges.forEach((element, i) => {
 const techContainer = document.querySelector("#teach");
 const tech = document.createElement("span");
 
-let count = 0;
+let techCount = 1;
+
+for (element of info.technologies) {
+  tech.textContent = element;
+  tech.setAttribute("id", "python");
+  break;
+}
 
 setInterval(() => {
   info.technologies.forEach((element, i) => {
-    if (count == i) {
+    if (techCount == i) {
       tech.textContent = element;
-      if (count == info.technologies.length - 1) {
-        count = -1;
+      if (
+        element.toLowerCase().includes("java") ||
+        element.toLowerCase().includes("html")
+      ) {
+        tech.setAttribute("id", "javascript");
+      } else if (
+        element.toLowerCase().includes("node") ||
+        element.toLowerCase().includes("mongo")
+      ) {
+        tech.setAttribute("id", "node");
+      } else if (element.toLowerCase().includes("react")) {
+        tech.setAttribute("id", "react");
+      } else if (element.toLowerCase().includes("red")) {
+        tech.setAttribute("id", "redux");
+      } else {
+        tech.setAttribute("id", "python");
+      }
+      if (techCount == info.technologies.length - 1) {
+        techCount = -1;
       }
     }
   });
-  count++;
-}, 3000);
+  techCount++;
+}, 6255);
 
 techContainer.appendChild(tech);
 

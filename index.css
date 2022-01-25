@@ -18,15 +18,11 @@ body {
   font-size: 1.8rem;
   font-weight: 300;
   padding-left: 2rem;
-
-  /* transition: padding-left 5s ease-in; */
 }
 #titles span:last-child {
   animation-name: titles;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-  /* animation-timing-function: ease-out */
-  /* background-color: yellow; */
 }
 @keyframes titles {
   from {
@@ -49,9 +45,12 @@ body {
   width: 100%;
   justify-content: space-around;
   text-align: center;
+  max-height: 200px;
+  align-items: center;
 }
 #challenges div {
   width: 20%;
+  max-width: 25%;
   border: 1px solid #d6cecede;
   border-radius: 5px;
   font-size: 1.5rem;
@@ -60,6 +59,31 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* margin-left: 10%; */
+}
+#challenge1:hover {
+  width: 21%;
+  font-weight: 500;
+  font-size: 1.52rem;
+  height: 230px;
+  background-color: bisque;
+  transition: background-color 350ms ease;
+}
+#challenge2:hover {
+  width: 21%;
+  font-weight: 500;
+  font-size: 1.52rem;
+  height: 230px;
+  background-color: bisque;
+  transition: background-color 350ms ease;
+}
+#challenge3:hover {
+  width: 21%;
+  font-weight: 500;
+  font-size: 1.52rem;
+  height: 230px;
+  background-color: bisque;
+  transition: background-color 350ms ease;
 }
 #teach {
   font-size: 1.5rem;
@@ -68,5 +92,33 @@ body {
 #teach span {
   font-size: 3rem;
   font-weight: 600;
+  opacity: 0;
+  animation-name: teach;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes teach {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#javascript {
+  color: yellow;
+}
+#node {
+  color: green;
+}
+#redux {
+  color: blueviolet;
+}
+#react {
   color: aqua;
+}
+#python {
+  color: rgba(0, 0, 128, 0.774);
 }
