@@ -1,55 +1,76 @@
-*{
-    box-sizing: border-box;
-    font-family: Montserrat;
+* {
+  box-sizing: border-box;
+  font-family: Montserrat;
 }
-body{
-    padding: 0% 10%;
+body {
+  padding: 0% 10%;
 }
-#author-name{
-    font-size: 5.5rem;
-    font-weight: 300;
-    letter-spacing: 1.5rem;
+#author-name {
+  font-size: 5.5rem;
+  font-weight: 300;
+  letter-spacing: 1.5rem;
 }
-#titles{
-    width: 100%;
-    height: auto;
-    background-color: bisque;
-    padding: 3% 2%;
-    font-size: 1.5rem;
-    font-weight: 300;
-    padding-left: 20px;
-    transition: padding-left 5s ease-in;
+#titles {
+  width: 100%;
+  height: auto;
+  background-color: bisque;
+  padding: 3% 2%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-left: 20px;
+
+  /* transition: padding-left 5s ease-in; */
 }
-#bio{
-    width: 100%;
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 2.5rem;
+#titles span:last-child {
+  animation-name: titles;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /* background-color: yellow; */
 }
-#challenges{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    text-align: center;
+@keyframes titles {
+  from {
+
+    margin-left: -20px;
+    opacity: 0.4;
+
+
+  }
+  to {
+
+    margin-left: 200px;
+    opacity: 0.9;
+
+  }
 }
-#challenges  div{
-    width: 20%;
-    border: 1px solid #d6cecede;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    font-weight: 300;
-    padding: 5rem 1.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+#bio {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
 }
-#teach{
-    font-size: 1.5rem;
-    font-weight: 300;
+#challenges {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
 }
-#teach span{
-    font-size: 3rem;
-    font-weight: 600;
-    color: aqua;
+#challenges div {
+  width: 20%;
+  border: 1px solid #d6cecede;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 5rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#teach {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+#teach span {
+  font-size: 3rem;
+  font-weight: 600;
+  color: aqua;
 }

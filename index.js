@@ -37,16 +37,15 @@ challenges.forEach((element, i) => {
   element.textContent = info.challenges[i].toUpperCase();
 });
 
-const techContainer = document.querySelector("#teach")
-const tech = document.createElement("span")
-
+const techContainer = document.querySelector("#teach");
+const tech = document.createElement("span");
 
 let count = 0;
 
 setInterval(() => {
   info.technologies.forEach((element, i) => {
     if (count == i) {
-      tech.textContent = element
+      tech.textContent = element;
       if (count == info.technologies.length - 1) {
         count = -1;
       }
@@ -55,4 +54,31 @@ setInterval(() => {
   count++;
 }, 3000);
 
-techContainer.appendChild(tech)
+techContainer.appendChild(tech);
+
+const titleContainer = document.querySelector("#titles");
+const titleIcon = document.querySelector("#titles span:first-child");
+const titleText = document.querySelector("#titles span:last-child");
+let titleCount = 1;
+
+for ([icon, title] of info.author.titles) {
+  titleIcon.textContent = icon;
+  titleText.textContent = title;
+  break;
+}
+
+setInterval(() => {
+  info.author.titles.forEach(([icon, title], i) => {
+    if (titleCount == i) {
+      titleIcon.textContent = icon;
+      titleText.textContent = title;
+      if (titleCount == info.author.titles.length - 1) {
+        titleCount = -1;
+      }
+    }
+  });
+  titleCount++;
+}, 3000);
+
+titleContainer.appendChild(titleIcon);
+titleContainer.appendChild(titleText);
