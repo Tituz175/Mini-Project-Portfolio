@@ -4,10 +4,11 @@ const info = {
     lastName: "Yetayeh",
     titles: [
       ["🌱", "Educator"],
-      ["💻", "Programmer"],
+      ["👨‍💻", "Programmer"],
       ["🌐", "Developer"],
       ["🔥", "Motivator"],
       ["📔", "Content Creator"],
+      ["👨‍🏫", "Instructor"]
     ],
   },
   technologies: [
@@ -78,7 +79,7 @@ setInterval(() => {
     }
   });
   titleCount++;
-}, 3000);
+}, 5000);
 
 titleContainer.appendChild(titleIcon);
 titleContainer.appendChild(titleText);
